@@ -54,7 +54,7 @@ nav {
 /* index page */
 .home-main {
     width: 100%;
-    height: calc(100vh - 75px - 115px);
+    height: 400px;
     background-color: #00000075;
     background-image: url(./images/mainPage.png);
     background-blend-mode: darken;
@@ -125,17 +125,18 @@ nav {
 }
 
 .about-main--title {
-    font-size: 32px;
+    font-size: 2.2rem;
     font-weight: 700;
     line-height: 38px;
     text-align: left;
 }
 
 .about-main--subtitle {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 22px;
     text-align: left;
+    margin-top: 32px;
 
 }
 
