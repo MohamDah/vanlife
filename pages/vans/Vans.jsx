@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 export default function Vans() {
     const [vansData, setVansData] = React.useState([])
@@ -24,7 +25,7 @@ export default function Vans() {
         }
     }
 
-
+    // Get data from "api"
     React.useEffect(() => {
         fetch("/api/vans")
             .then(res => res.json())
@@ -35,11 +36,17 @@ export default function Vans() {
     const vansElements = vansData.map(van => {
         const el = (
             <div key={van.id} className="vans-card">
-                <img src={van.imageUrl} alt="image of a van" />
-                <h3>{van.name} <span>${van.price}</span></h3>
-                <div className={`vans-card-type vans-card-type--${van.type}`}>
-                    {van.type[0].toUpperCase() + van.type.slice(1)}
-                </div>
+                <Link
+                    to={`/vans/${van.id}`}
+                    aria-label={`View details for ${van.name}, 
+                             priced at $${van.price} per day`}
+                >
+                    <img src={van.imageUrl} alt="image of a van" />
+                    <h3>{van.name} <span>${van.price}</span></h3>
+                    <div className={`vans-card-type vans-card-type--${van.type}`}>
+                        {van.type[0].toUpperCase() + van.type.slice(1)}
+                    </div>
+                </Link>
             </div>
         )
         if (!Object.keys(filters).some(k => filters[k])) {
@@ -53,9 +60,10 @@ export default function Vans() {
     const filterElements = ["simple", "luxury", "rugged"].map(tag => {
         return (
             <button
+                key={tag}
                 onClick={() => changeFilter(tag)}
                 className={`vans-filter ${tag} ${filters[tag] && `vans-card-type--${tag}`}`}
-                // className={filters[tag] ? }
+            // className={filters[tag] ? }
             >
                 {tag[0].toUpperCase() + tag.slice(1)}
             </button>
@@ -72,7 +80,7 @@ export default function Vans() {
             </div>
 
             <div className="vans-card-container">
-                {vansElements}
+                {vansData.length > 0 ? vansElements : <h1>Loading...</h1>}
             </div>
 
         </main>

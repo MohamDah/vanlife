@@ -1,4 +1,5 @@
-import aboutImage from "../images/aboutPage.png"
+import aboutImage from "../../images/aboutPage.png"
+import { Link } from "react-router-dom"
 
 export default function About() {
   return (
@@ -18,7 +19,9 @@ export default function About() {
         <div className="about-main--block">
           <h2>Your destination is waiting.
             <span>Your van is ready.</span></h2>
-          <button>Explore our vans</button>
+          <Link to="/vans">
+            <button>Explore our vans</button>
+          </Link>
         </div>
 
 
