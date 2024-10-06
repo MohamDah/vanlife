@@ -1,4 +1,4 @@
-import aboutImage from "../../images/aboutPage.png"
+import aboutImage from "../images/aboutPage.png"
 import { Link } from "react-router-dom"
 
 export default function About() {

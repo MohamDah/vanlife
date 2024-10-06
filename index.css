@@ -239,6 +239,7 @@ a.page-on {
     line-height: 23.92px;
     text-align: center;
     color: #4D4D4D;
+    transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -564,6 +565,7 @@ footer {
     text-align: left;
     margin-bottom: 15px;
 }
+
 .h-d-detail>strong {
     font-size: 14.35px;
     font-weight: 700;
@@ -591,4 +593,332 @@ footer {
 .h-d-photos {
     width: 110px;
     border-radius: 5px;
+}
+
+/* notfound */
+.notfound-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto;
+    padding: 0 26px;
+}
+
+.notfound-container h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 42px;
+    text-align: left;
+}
+
+.notfound-container>a {
+    height: 55px;
+    width: 100%;
+    max-width: 600px;
+    background-color: #161616;
+    border-radius: 5px;
+    margin: 40px 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 31.66px;
+    text-align: center;
+
+}
+
+/* login page */
+
+.login-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 51px 27px;
+
+}
+
+.login-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+}
+
+.login-message {
+    text-align: center;
+    color: red;
+    margin-bottom: 5px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.login-form input {
+    height: 42px;
+    padding: 9px 13px 9px 13px;
+    gap: 0px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px 6px 0px 0px;
+    opacity: 0px;
+    margin-bottom: 7px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.login-submit {
+    margin-top: 15px;
+    height: 55px;
+    border: none;
+    background-color: #FF8C38;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.login-submit:disabled {
+    background-color: #AAA;
+}
+
+/* reviews page */
+.host-reviews {
+    padding-inline: 26px;
+    color: #161616;
+}
+
+.host-reviews .top-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.host-reviews .top-text>h2 {
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0;
+    margin-right: 20px;
+}
+
+.host-reviews .top-text>p {
+    margin: 0;
+    color: #4d4d4d;
+}
+
+.host-reviews .top-text>p span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.host-reviews>img {
+    margin-bottom: 36px;
+    width: 100%;
+}
+
+.host-reviews .review {
+    margin-block: 25px;
+}
+
+.host-reviews .review .info {
+    display: flex;
+    margin: 8px 0;
+}
+
+.host-reviews .review .name {
+    color: #161616;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+.host-reviews .review .date {
+    color: #8c8c8c;
+}
+
+.host-reviews hr {
+    background-color: #c7c7c7;
+    height: 1px;
+    border: 0;
+}
+
+.host-reviews .review-star {
+    color: #ff8c38;
+    margin-right: 5px;
+}
+
+/* income page */
+.host-income {
+    padding-inline: 26px;
+    color: #161616;
+}
+
+.host-income>p {
+    color: #4d4d4d;
+}
+
+.host-income>p span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.host-income>h2 {
+    font-size: 38px;
+    color: #161616;
+    font-weight: 900;
+}
+
+img.graph {
+    width: 100%;
+    max-width: 500px;
+}
+
+.host-income .info-header>p {
+    color: #4d4d4d;
+}
+
+.host-income .info-header>p span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.host-income .info-header>h3 {
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 60px;
+}
+
+.host-income .transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 31px;
+    padding: 35px 29px;
+    border-radius: 6px;
+}
+
+.host-income .transaction>h3 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.host-income .transaction>p {
+    font-weight: 500;
+    font-size: 20px;
+    color: #4d4d4d;
+}
+
+/* dashboard page */
+.host-dashboard-earnings {
+    background-color: #ffead0;
+    padding: 37px 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.host-dashboard-earnings>.info>h1 {
+    font-size: 36px;
+    color: #161616;
+    margin: 0;
+}
+
+.host-dashboard-earnings>.info>p {
+    color: #4d4d4d;
+}
+
+.host-dashboard-earnings>.info>p>span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.host-dashboard-earnings>.info>h2 {
+    margin: 0;
+    font-size: 38px;
+    color: #161616;
+    font-weight: 900;
+}
+
+.host-dashboard-reviews {
+    background-color: #ffddb2;
+    padding: 25px 26px;
+    display: flex;
+    align-items: center;
+}
+
+.host-dashboard-reviews>h2 {
+    margin: 0;
+}
+
+.host-dashboard-reviews .star {
+    color: #ff8c38;
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+.host-dashboard-reviews p {
+    margin-left: 5px;
+    font-size: 20px;
+    color: #4d4d4d;
+    margin-right: auto;
+}
+
+.host-dashboard-reviews p>span {
+    font-weight: bold;
+    color: #161616;
+}
+
+.host-dashboard-vans {
+    padding: 38px 26px;
+}
+
+.host-dashboard-vans>.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.host-dashboard-vans .host-vans-list {
+    padding-inline: 0;
+}
+
+.host-van-single {
+    display: flex;
+    align-items: center;
+    padding: 18px 24px;
+    height: 105px;
+    gap:20px;
+    margin-bottom: 15px;
+    background-color: #FFF;
+}
+
+.host-van-single > a {
+    margin-left: auto;
+}
+
+.host-van-single img {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.host-dashboard-vans a,
+.host-dashboard-reviews a,
+.host-dashboard-earnings a {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: right;
+
 }
