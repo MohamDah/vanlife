@@ -44,6 +44,8 @@ export default function Login() {
                 />
                 <button className="login-submit" disabled={status === "submitting"}>{status == "idle" ? "Log in" : "Logging in..."}</button>
             </Form>
+            <p style={{color: "red"}}>Use email "b@b.com" and password "p123".</p>
+            <p style={{color: "red"}}>There is no actual proper authentication functionality on this app. There is only this one "user" and the only way to log out is to clear local storage (yes, I used local storage. This project was just to practice React router, cut me some slack)</p>
         </main>
     )
 }
