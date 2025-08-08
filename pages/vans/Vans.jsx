@@ -4,13 +4,16 @@ import { getVans } from "../../api"
 import { Suspense } from "react"
 import { ColorRing } from 'react-loader-spinner'
 
-export function loader() {
+export async function loader() {
     const vansPromise = getVans()
-    return defer({ vansPromise })
+    return await vansPromise
+    // return defer({ vansPromise })
 }
 
 export default function Vans() {
     const [searchParams, setSearchParams] = useSearchParams()
+    const vans = useLoaderData()
+    console.log(vans)
 
     function changeFilter(name) {
         setSearchParams(prev => {
@@ -80,11 +83,12 @@ export default function Vans() {
             </div>
 
             <div className="vans-card-container">
-                <Suspense fallback={<ColorRing />}>
+                {renderVansElements(vans)}
+                {/* <Suspense fallback={<ColorRing />}>
                     <Await resolve={useLoaderData().vansPromise}>
                         {renderVansElements}
                     </Await>
-                </Suspense>
+                </Suspense> */}
             </div>
 
         </main>
